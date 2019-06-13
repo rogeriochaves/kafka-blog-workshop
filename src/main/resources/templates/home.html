@@ -7,6 +7,10 @@
 </head>
 <body>
 <h1>Welcome to Kafka Blog</h1>
+<form method="POST" th:action="@{/posts/save}" th:object="${post}">
+    Title: <input type="text" th:field="*{title}" />
+    <input type="submit" value="Submit" />
+</form>
 <script src="/js/main.js"></script>
 </body>
 </html>
