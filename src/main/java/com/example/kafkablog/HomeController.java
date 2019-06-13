@@ -19,7 +19,7 @@ public class HomeController {
     public String save(@ModelAttribute Post post) {
         UUID uuid = UUID.randomUUID();
         post.setId(uuid.toString());
-        System.out.print(post);
+        PostsStream.getInstance().produce(post);
 
         return "redirect:/";
     }
