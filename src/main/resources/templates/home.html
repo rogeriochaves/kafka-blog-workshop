@@ -11,6 +11,12 @@
     Title: <input type="text" th:field="*{title}" />
     <input type="submit" value="Submit" />
 </form>
+<hr />
+<div th:each="p : ${posts}">
+    <li>
+        <p><span th:text="${p.getTitle()}"></span></p>
+    </li>
+</div>
 <script src="/js/main.js"></script>
 </body>
 </html>
